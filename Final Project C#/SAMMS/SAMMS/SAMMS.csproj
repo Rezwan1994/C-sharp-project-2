@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7010429C-6BDE-44F2-B82D-7A1DCC2A2A9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAMMS</RootNamespace>
+    <AssemblyName>SAMMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrandName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrandName.Designer.cs">
+      <DependentUpon>BrandName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarEntry.Designer.cs">
+      <DependentUpon>CarEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpLogIn.Designer.cs">
+      <DependentUpon>EmpLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpProfile.Designer.cs">
+      <DependentUpon>EmpProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BrandName.resx">
+      <DependentUpon>BrandName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarEntry.resx">
+      <DependentUpon>CarEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpLogIn.resx">
+      <DependentUpon>EmpLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpProfile.resx">
+      <DependentUpon>EmpProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferrari-Italia-Crystal-City-Car-and-Ferrari-California-2014-Orange-Neon-design-by-Tony-Kokhan-www.el-tony.com_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Aventador-Front-Crystal-City-Car-2014-Orange-Neon-design-by-Tony-Kokhan-www.el-tony.com_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferrari-Italia-Crystal-City-Car-and-Ferrari-California-2014-Orange-Neon-design-by-Tony-Kokhan-www.el-tony.com_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb-1920-300837.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3c3ed3bacc6dbae2c611c83ed2e5c9e5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Logo-03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Logo-Color.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Logo-031.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Logo-Color1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pmh_lamborghinis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\202554-tuning-Nissan_Skyline_GT-R_R35-Liberty_Walk-Nissan_GTR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPRichPreviewLauncher">
+      <Guid>{FA258721-CF24-45D7-A9CB-80047D7FEC35}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lamborghini-gallardo-wallpaper-images-logo-high-backgrounds-with-background-full-hd-pics-for-androids-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cjVvUNh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Logo-032.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9VDPtp7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nissan-gtr-hd-wallpaper--1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
